@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginScreen from "./pages/Login";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import MainScreen from "./pages/Main";
 
-export default App;
+export default () => {
+	const { pathname, search } = useLocation();
+	return (
+		<div style={{ height: "100%" }}>
+			<div id="bg"></div>
+			<Routes>
+				<Route path="/" exact element={<LoginScreen />} />
+
+				<Route path="/app/" element={<MainScreen />} />
+			</Routes>
+		</div>
+	);
+};

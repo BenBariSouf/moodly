@@ -1,0 +1,114 @@
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
+	transition: $property $duration $ease;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	vertical-align: middle;
+	text-decoration: none;
+	background: transparent;
+	padding: 0;
+	margin-right: 12px;
+	font-size: inherit;
+	font-family: inherit;
+	&.learn-more {
+		width: 12rem;
+		height: auto;
+		position: absolute;
+		right: 10px;
+		bottom: 5px;
+		.circle {
+			@include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+			position: relative;
+			display: block;
+			margin: 0;
+			width: 2.125rem;
+			height: 2.125rem;
+			background: #22c55e;
+			border-radius: 1.625rem;
+			.icon {
+				@include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 200px;
+				margin: auto;
+				background: $white;
+				&.arrow {
+					@include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+					left: 0.4rem;
+					width: 0.9rem;
+					height: 0.1122rem;
+					background: none;
+					&::before {
+						position: absolute;
+						content: "";
+						top: -0.25rem;
+						left: 3px;
+						width: 0.625rem;
+						height: 0.625rem;
+						border-top: 0.125rem solid #fff;
+						border-right: 0.125rem solid #fff;
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+		.button-text {
+			@include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+			position: absolute;
+			top: 0;
+			left: 1px;
+			right: 0;
+			bottom: 0;
+			padding: 0.41rem 0;
+			margin: 0 0 0 1.5rem;
+			color: $black;
+			font-weight: 700;
+			font-size: 0.9rem;
+			line-height: 1.6;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+	&:hover {
+		.circle {
+			width: 100%;
+			.icon {
+				&.arrow {
+					background: $white;
+					transform: translate(0.8rem, 0);
+				}
+			}
+		}
+		.button-text {
+			color: $white;
+			visibility: visible;
+			animation: fadeIn 0.5s;
+		}
+	}
+}
