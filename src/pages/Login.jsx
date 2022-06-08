@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { login } from "../utils";
 import { PlaylistData } from "../PlaylistData";
 import _ from "lodash";
+import Logo from "../assets/logo.png";
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -127,7 +128,8 @@ const LoginScreen = () => {
 				<div className="slide-track">{getSliderImages(sliderImages.length)}</div>
 			</Slider>
 			<Wrapper>
-				<MainTitle>Moodify</MainTitle>
+				{/* <MainTitle>Moodly</MainTitle> */}
+				<img src={Logo} alt="fireSpot" />
 				<Subtitle>Discover music that fits your mood</Subtitle>
 				<BigButton onClick={login}>Log In With Spotify</BigButton>
 			</Wrapper>
