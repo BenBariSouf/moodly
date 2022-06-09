@@ -1,6 +1,6 @@
 // Api utils
 export const getRedirectUri = () => {
-	return "http://localhost:3000/app";
+	return "https://moodly-one.vercel.app";
 };
 
 export const login = () => {
