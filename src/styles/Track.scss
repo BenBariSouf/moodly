@@ -1,6 +1,6 @@
 $bg: #f3f8fa;
 $white: #fff;
-$black: #282936;
+// $black: #282936;
 
 @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
 	transition: $property $duration $ease;
@@ -87,7 +87,7 @@ button {
 			bottom: 0;
 			padding: 0.41rem 0;
 			margin: 0 0 0 1.5rem;
-			color: $black;
+			// color: $black;
 			font-weight: 700;
 			font-size: 0.9rem;
 			line-height: 1.6;

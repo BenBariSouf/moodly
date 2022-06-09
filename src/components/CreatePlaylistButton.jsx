@@ -48,7 +48,7 @@ const createPlaylist = async (accessToken, userId) => {
 		method: "POST",
 		headers: getHeaders(accessToken),
 		body: JSON.stringify({
-			name: "My Moodify Playlist",
+			name: "My Moodly Playlist",
 		}),
 	}).then((res) => res.json());
 	//TODO handle error

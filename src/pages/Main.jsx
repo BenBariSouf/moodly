@@ -11,7 +11,6 @@ const MainScreen = ({ location }) => {
 
 	useEffect(() => {
 		const accessToken = queryString.parse(window.location.hash, { ignoreQueryPrefix: true }).access_token;
-		console.log("accessToken:", accessToken);
 		dispatch(setAccessToken(accessToken));
 		const tracks = JSON.parse(window.localStorage.getItem("tracks"));
 		if (tracks) {

@@ -34,7 +34,7 @@ const valenceToString = (valence) => {
 };
 
 const MoodIcon = ({ valence, energy, size }) => {
-	const happy = require(`../assets/${energyToString(energy)}_${valenceToString(valence)}.svg`);
+	const happy = require(`../assets/icons/${energyToString(energy)}_${valenceToString(valence)}.svg`);
 
 	return <Face src={happy} size={size} />;
 };

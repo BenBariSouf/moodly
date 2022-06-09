@@ -92,8 +92,6 @@ const Track = ({ trackData }) => {
 
 	const { id, artist, imageUrl, name } = trackData;
 
-	console.log("trackData", trackData);
-
 	useEffect(() => {
 		setImageLoaded(false);
 
@@ -117,7 +115,7 @@ const Track = ({ trackData }) => {
 					<span className="icon arrow"></span>
 				</span>
 				<a className="button-text" href={`https://open.spotify.com/track/${id}`} target="_blank">
-					Stream On Spotify
+					Listen On Spotify
 				</a>
 			</button>
 		</Card>
