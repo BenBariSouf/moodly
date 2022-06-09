@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { getRecommendations } from "../actions";
-import loaderIcon from "../assets/loader.svg";
+import loaderIcon from "../assets/icons/loader.svg";
 import { setTracks } from "../reducers/spotifyReducer";
 import { SmallTitle } from "./Typography";
 

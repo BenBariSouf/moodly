@@ -16,7 +16,8 @@ export const Title = styled.div`
 export const BigTitle = styled(Title)`
 	font-size: 2rem;
 	@media only screen and (max-width: 600px) {
-		font-size: 1.125rem;
+		font-size: 1.4rem;
+		letter-spacing: 1px;
 	}
 `;
 

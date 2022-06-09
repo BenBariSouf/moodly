@@ -11,9 +11,15 @@ const Wrapper = styled.div`
 	align-items: center;
 `;
 
+const Header = styled.div`
+	margin-top: 25px;
+`;
+
 const SelectorView = () => (
 	<Wrapper>
-		<BigTitle>What's your mood?</BigTitle>
+		<Header>
+			<BigTitle>What's your mood?</BigTitle>
+		</Header>
 		<MoodSelector />
 		<SmallTitle>Choose up to 5 genres:</SmallTitle>
 		<GenreSelector />
